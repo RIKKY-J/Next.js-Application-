@@ -12,6 +12,15 @@ export default function layout({ children }) {
       <head />
       <body>
         <h1 style={{ color: 'red', fontSize: '2rem' }}>My App</h1>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/files">Files</a></li>
+            <li><a href="/services">Services</a></li>
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
