@@ -1,4 +1,5 @@
 import React from 'react'
+import ComponentsPage from './_components/page';
 export const metadata = {
   title: {
     template: '%s | Avatar_Tech',
@@ -12,6 +13,7 @@ export default function layout({ children }) {
       <head />
       <body>
         <h1 style={{ color: 'red', fontSize: '2rem' }}>My App</h1>
+        <ComponentsPage />
         <nav>
           <ul>
             <li><a href="/">Home</a></li>
