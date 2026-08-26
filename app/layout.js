@@ -16,7 +16,7 @@ export default function layout({ children }) {
         <ComponentsPage />
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/">This is the Home Page</a></li>
             <li><a href="/blogs">Blogs</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/files">Files</a></li>
