@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 
 export const dynamicParams = false;
-
+export const revalidate = 2;
 export async function generateStaticParams() {
     return [
         { blogID: '1' },
@@ -22,5 +22,5 @@ export default async function Blog({ params }) {
     if (!Number.isInteger(id)) {
         notFound();
     }
-    return <div>This is the blog page for {id}</div>;
+    return <div>This is the blog page for {id} at Date {new Date().toLocaleString()}</div>;
 }
