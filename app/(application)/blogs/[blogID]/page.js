@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation';
 
+
+
 export async function generateMetadata({ params }) {
     const { blogID } = await params;
     return {
@@ -8,10 +10,10 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Blog({ params }) {
-    console.log(await params);
     const { blogID } = await params;
-    if(typeof blogID !== 'number' && isNaN(blogID)) {
+    const id = Number(blogID);
+    if (!Number.isInteger(id)) {
         notFound();
     }
-    return <div> This is the blog page for {blogID} </div>;
+    return <div>This is the blog page for {id}</div>;
 }
