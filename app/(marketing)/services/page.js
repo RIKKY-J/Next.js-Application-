@@ -4,6 +4,7 @@ import { cookies } from 'next/headers';
 export default async function page(searchParams) {
   const { params } = await searchParams;
   const myCookies = await cookies();
+  console.log('Cookies:', myCookies.getAll());
   return (
     <div>
       <h1>Services</h1>
