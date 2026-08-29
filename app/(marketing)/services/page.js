@@ -1,6 +1,7 @@
 
-export const dynamic = "force-dynamic";
-export default function page() {
+//export const dynamic = "force-dynamic";
+export default async function page(searchParams) {
+  const { params } = await searchParams;
   return (
     <div>
       <h1>Services</h1>
