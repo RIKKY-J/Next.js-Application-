@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
-import views from '@/components/views';
-import likes from '@/components/likes';
-import comments from '@/components/comments';    
-
+import Views from '@/components/views';
+import Likes from '@/components/likes';
+import Comments from '@/components/comments';
+import { Suspense } from 'react';
 
 //export const dynamicParams = false;
 export const revalidate = 2;
@@ -26,6 +26,14 @@ export default async function Blog({ params }) {
     if (!Number.isInteger(id)) {
         notFound();
     }
-    return <div> <h1>This is the blog page for {id} at Date {new Date().toLocaleString()}</h1>
-     <views /><likes /><comments /></div>;
+    return (
+        <div>
+            <h1>This is the blog page for {id} at Date {new Date().toLocaleString()}</h1>
+            <Suspense fallback={<div>Loading views...</div>}>
+                <Views />
+            </Suspense>
+            <Likes />
+            <Comments />
+        </div>
+    );
 }
