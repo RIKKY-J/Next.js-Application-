@@ -1,6 +1,10 @@
 import { notFound } from 'next/navigation';
+import views from '@/components/views';
+import likes from '@/components/likes';
+import comments from '@/components/comments';    
 
-export const dynamicParams = false;
+
+//export const dynamicParams = false;
 export const revalidate = 2;
 export async function generateStaticParams() {
     return [
@@ -22,5 +26,6 @@ export default async function Blog({ params }) {
     if (!Number.isInteger(id)) {
         notFound();
     }
-    return <div> <h1>This is the blog page for {id} at Date {new Date().toLocaleString()}</h1><views /><likes /><comments /></div>;
+    return <div> <h1>This is the blog page for {id} at Date {new Date().toLocaleString()}</h1>
+     <views /><likes /><comments /></div>;
 }
