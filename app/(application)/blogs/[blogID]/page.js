@@ -22,5 +22,5 @@ export default async function Blog({ params }) {
     if (!Number.isInteger(id)) {
         notFound();
     }
-    return <div>This is the blog page for {id} at Date {new Date().toLocaleString()}</div>;
+    return <div> <h1>This is the blog page for {id} at Date {new Date().toLocaleString()}</h1><views /><likes /><comments /></div>;
 }
