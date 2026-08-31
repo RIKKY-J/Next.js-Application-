@@ -5,8 +5,9 @@ export default function Likes() {
   console.log(window);}
   console.log("likes component rendered");
     return (
-    <div>
-      2000 likes
+    <div onClick ={() => {console.log("likes clicked");}}>
+
+      2000 likes {String(console.log("running on server"))}
     </div>
   )
 }
