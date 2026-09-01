@@ -8,6 +8,7 @@ const Posts = () => {
             const data = await responce.json();
             console.log(data);
         }
+        featchPosts();
     })
     return (
         <>
