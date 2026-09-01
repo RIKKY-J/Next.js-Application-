@@ -1,14 +1,18 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 const Posts = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        async function feachPosts(){
-            const responnce = await fearch(
+        async function fetchPosts(){
+            const response = await fetch(
                 "https://jsonplaceholder.typicode.com/posts"
             );
-            const data = await responce.json();
+            const data = await response.json();
             setPosts(data);
         }
-        featchPosts();
+        fetchPosts();
     }, []);
     return (
         <>
