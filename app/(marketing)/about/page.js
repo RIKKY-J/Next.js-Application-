@@ -2,6 +2,10 @@ export const metadata = {
   title: 'About Us',
 };
 export default function About(){
+    const random = Math.random();
+    if (random < 0.5) {
+        throw new Error('Something went wrong!');
+    }
     return (
         <>
             <h1>About Us</h1>
