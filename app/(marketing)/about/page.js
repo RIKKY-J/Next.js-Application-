@@ -3,6 +3,7 @@ export const metadata = {
 };
 export default function About(){
     const random = Math.random();
+    console.log(random);
     if (random < 0.5) {
         throw new Error('Something went wrong!');
     }
